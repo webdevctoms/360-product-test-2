@@ -8,6 +8,7 @@
 
     var vc3dEye=function (selectorName,params) {
     	//assigning params
+        console.log("assign");
     	this.selector = $(selectorName);
     	this.imagePath = params.imagePath;
     	this.totalImages = params.totalImages;
@@ -93,7 +94,7 @@
             selector.css("background-size", "cover");
             
             $("<img/>").attr("src", appropriateImageUrl).load(function() {
-                selector.height(this.height/2).width(this.width/2);
+                selector.height(this.height).width(this.width/1.1);
             });
 
             //load all other images by force
